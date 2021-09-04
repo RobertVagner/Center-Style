@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+        <title>Center Style </title>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Robert Vagner">
+        <meta name="description" content="Center Style é uma loja online que atende apenas o Sul de Minas, conheça os nossos produtos.">
+        <meta name="keywords" content="loja, roupas, minas gerais, variedades, novidade, center, style">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="shortcut icon" href="./img/logo/Center Style.png">
+        <!-- Todo css da página -->
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            body{
+                background-color: rgb(255, 252, 240);
+                text-align: center;
+                margin: auto;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .imagem{
+                width: 30vh;
+            }
+            /* css do item de busca */
+            #divBusca{
+                align-items: center;
+                text-align: center;
+                margin: auto;
+                background-color:rgb(236, 229, 220);
+                border:solid 2px rgb(190, 166, 134);
+                border-radius:1.5vh;
+                width:80vh;
+                height:4.8vh;
+            }
+
+            #txtBusca{
+                float:left;
+                background-color:transparent;
+                padding-left:5px;
+                font-size:18px;
+                border:none;
+                height:4.4vh;
+                width:60vh;
+            }
+
+            #btnBusca{
+                border:none;
+                float: right;
+                height:4.7vh;
+                border-radius:0 1.1vh 1.1vh 0;
+                width:70px;
+                font-weight:bold;
+                color: white;
+                background:rgb(190, 166, 134);
+            }
+            #divBusca img{
+                float:left;
+                width: 30px;
+            }
+            /* css do menu institucional */
+            .menuinst{
+                width: 100%;
+            }
+            .menuinst ul{
+                background: rgb(190, 166, 134);
+                padding: 5px;
+            }
+            .menuinst ul li{
+                display: inline;
+                list-style-type: none;
+            }
+            .menuinst ul li a{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-decoration: none;
+                color: black;
+                text-transform: uppercase;
+                font-size: 2.3vh;
+                padding: 0px 5px;
+            }
+            .menuinst ul li a:hover{
+                background: burlywood;
+                border-radius: 15%;
+            }
+            /* css do efeito carrosel nas imagens */
+            .carrossel{
+                overflow: hidden;
+                width: 100%;
+            }
+            .carrossel ul{
+                width: 0;
+                padding: 0;
+                margin: 50px auto;
+                width: 142vh;
+                height: 69vh;
+                outline: 0.5px solid black;
+                display: flex;
+                overflow: hidden;
+            }
+            .carrossel ul li{
+                list-style-type: none;
+                position: relative;
+                animation: slide 20s infinite ease-out;
+            }
+            /* efeito de carrosel, movimentos */
+            @keyframes slide{
+                0%{left: 0px;}
+                10%{left: 0px;}
+                20%{left: -1024px;}
+                30%{left: -1024px;}
+                40%{left: -2048px;}
+                50%{left: -2048px;}
+                60%{left: -3072px;}
+                70%{left: -3072px;}
+                80%{left: -4096px;}
+                90%{left: -4096px;}
+                100%{left: 0px;}
+            }
+            /*aqui é o css dos traços*/
+            .traços {
+                display:inline-flex;
+                width: 100%;
+                position: relative;
+                align-items: baseline;
+            }
+            .traços #t1 {
+                height: 3px;
+                border: none;
+                background-color: rgb(190, 166, 134);
+                width: 50%;
+            }
+            .traços #t2 {
+                height: 1px;
+                border: none;
+                background-color: black;
+                width: 70%;
+            }
+            /*Promoções*/
+            .promoção{
+                right: 0%;
+                font-size: 1.1em;
+                position: absolute;
+                padding: 0.5vh;
+                top: -1%;
+                background-color: rgb(188, 225, 233);
+                border-radius: 0.5vw 0vw 0vw 0.5vw;
+                font-weight: bold;
+            } 
+            .pacotes{  
+                display:inline-block;
+                position: relative;
+                box-shadow: 0vw 0.37vw 0.26vw rgba(153, 153, 153, 0.5);
+                margin:0.5em;
+                padding:0%;
+                width: 38vmin;
+                height: auto;
+                background-color: rgb(245, 245, 245); 
+                color:black ;
+                padding-bottom: 5px;
+            }
+            
+            .pacotes button {
+                margin-bottom: 2vh;
+                padding: 0.7vh;
+                border:none;
+                background-color: rgb(190, 166, 134);
+                border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
+                font-weight: bold;
+                font-size: 0.8rem;
+            }
+            .pacotes button a{
+                text-decoration: none;
+                color: inherit;
+            }
+            .pacotes button:hover {
+                background-color: rgb(219, 202, 180);
+                cursor: pointer;
+            }
+            .pacotes h2{
+                text-transform: uppercase;
+                text-align:center;
+                font-size: 1.1em;
+                margin-left: 0%;
+                margin-bottom: 0%;
+                margin-top: -8%;
+                position: absolute;
+                background-color:rgb(190, 166, 134);
+                padding: 0.8vh;
+                border-radius: 0vw 0.5vw 0.5vw 0vw;
+            }
+            .pacotes:hover {
+                transform: scale(1.1);
+                transition: transform 0.2s ease 0.2s;
+                border:1px solid rgb(107, 52, 52);
+                border-style: solid;
+            }
+            .pacotes img{
+                width: 100%;
+            /*border-radius: 1vw 1vw 0vw 0vw;*/
+            }
+            .pacotes #icon{
+                width: 18px;
+                height: 18px;
+            }
+            .pacotes #saída{
+                text-align: left;
+                margin-top: 3vh;
+                margin-left: 1vmax;
+                font-size: 0.9em;
+            }
+            .pacotes #info{
+                text-align: left;
+                margin-top: 3vh;
+                margin-left: 1vmax;
+                font-size: 0.9rem;
+                margin-bottom: 1vh;
+            }
+            .pacotes #valor{
+                text-align: left;
+                margin-top: 0%;
+                margin-left: 1vmax;
+                font-size: 1.4em;
+            }
+            /* rodapé da página */
+            footer{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                background: rgb(190, 166, 134);
+                color: black;
+                padding: 20px 0;
+                text-align: center;
+                font-weight: 100;
+            }
+            footer img{
+                width: 5vh;
+                float: right;
+            }
+
+        </style>
+     </head>
+     <!--Aqui começa o corpo da página-->
+     <body id="bg">
+        <div class="container">
+            <header>
+                <!-- logo inicial da página -->
+                <img class="imagem" src="./img/logo/01.png" id="topo"/>
+                <!-- Html do item de busca -->
+                <div id="divBusca">
+                    <img src="./img/logo/search.png" alt="Buscar..."/>
+                    <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                    <button id="btnBusca" onclick="alert('A busca ainda não está habilitada!')">Buscar</button>
+                </div>
+                <!-- Menu institucional -->
+                <div class="menuinst">
+                    <ul>
+                        <li><a href="./index.html" target="blank">Home</a></li>
+                        <li><a href="#promocoes">Promoções</a></li>
+                        <li><a href="#topo">Masculino</a></li>
+                        <li><a href="#topo">Feminino</a></li>
+                        <li><a href="#topo">Infantil</a></li>
+                        <li><a href="#topo">Quem Somos</a></li>
+                        <li><a href="#topo">Contatos</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="conteudo">
+                <h2 id="promocoes">Promoção do Dia!</h2>
+                <!--Traços depois do texto tíulo-->
+                <div class="traços">
+                    <hr id="t1"><hr id="t2">
+                </div> 
+                <!--pacotes de promoções-->
+                <div class="pacotes">
+                    <img id="relógioimg2" src="./img/conteudo/HOUSTON FULL BLACK 40MM - R$190/01.jpg" alt="relógio masculino">
+                    <p class="promoção">30% off</p>
+                  <h2> HOUSTON FULL BLACK 40MM </h2><br><br>
+                  <p id="saída">
+                      <img src="./img/logo/01.png" alt="icon" id="icon">
+                      Este é um relógio sofisticado que adiciona confiança e atitude ao seu estilo.
+                  </p>
+                  <p id="info">Valor:</p>
+                  <p id="valor">R$ 210,00</p>
+                  <button><a href="./relogio1.html" target="blank">Ver oferta</a></button>
+                  </div>
+          
+                  <div class="pacotes">
+                      <img id="relogioimg2" src="./img/conteudo/NOLITA ROSÉ GOLD 32MM - R$190,00/01.jpg" alt="relógio feminino">
+                      <p class="promoção">20% off</p>
+                     <h2> NOLITA ROSÉ GOLD 32MM </h2><br><br>
+                     <p id="saída">
+                      <img src="./img/logo/01.png" alt="icon" id="icon"> 
+                      Este relógio está pronto para você ir do escritório para a festa na cobertura num piscar de olhos.
+                     </p>
+                     <p id="info">Valor:</p>
+                     <p id="valor">R$ 205,90</p>
+                     <button>Ver oferta</button>
+                  </div>
+          
+                  <div class="pacotes">
+                    <img id="mochila" src="./img/conteudo/Mochila juvenil adventteam - R$32,29/01.jpg" alt="Mochila">
+                    <p class="promoção">20% off</p>
+                  <h2> Mochila juvenil adventteam</h2><br><br>
+                  <p id="saída">
+                    <img src="./img/logo/01.png" alt="icon" id="icon"> 
+                    Mochila costas adventure cinza, excelente para escola. Repartições grande e com muito conforto.
+                  </p>
+                  <p id="info">Valor:</p>
+                  <p id="valor">R$ 69,99</p>
+                  <button>Ver oferta </button>
+                  </div>          
+            </div>
+            <!--Traços depois do texto tíulo-->
+            <div class="traços">
+                <hr id="t1"><hr id="t2">
+            </div> 
+            <br><br>
+        </div>
+            <!-- Rodapé da Página -->
+            <div class="rodape">
+                <footer>
+                    <div class="fim">
+                        <span>&copy; 2021 - Center Style</span>
+                        <a href="#topo"><img src="./img/logo/seta.png" class="seta" alt="" title="Voltar ao Topo"></a>
+                    </div>
+                </footer>
+            </div>        
+    </body>
+
+</html>
